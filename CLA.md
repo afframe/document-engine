@@ -1,6 +1,6 @@
 # Contributor License Agreement
 
-This agreement applies to anything you submit to this project ("your contribution"). "Project owner" means the owner of the `afframe/document-engine` repository and its successors.
+This agreement applies to anything you submit to this project ("your contribution"). "Project owner" means Hleb Tkachenko and his successors.
 
 1. **You keep your copyright.** You can still use your contribution however you like.
 2. **Copyright license.** You give the project owner a perpetual, worldwide, non-exclusive, royalty-free, irrevocable license to use, change, distribute and sublicense your contribution, under any license terms, including commercial ones.
