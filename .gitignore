@@ -1,0 +1,27 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+*.tsbuildinfo
+.fallow/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Generated documents and local test data can hold personal data
+/output/
+/tmp/
+
+# Logs and OS files
+*.log
+.DS_Store
+
+# Claude: settings.json is tracked, the rest is personal
+.claude/*
+!.claude/settings.json
+CLAUDE.local.md
+.context/
