@@ -15,7 +15,7 @@ A headless engine, installed as a tool and imported into other projects, that gi
 ## The whole picture
 
 ```text
-ENGINE (one package, command: document-engine)
+ENGINE (one package, command: hde)
 ├── Core            checks data, builds the document, runs connectors
 ├── Ways in         code, CLI, HTTP: all call the same core functions
 ├── Data table      every $TAG, one table across all documents
@@ -98,7 +98,7 @@ Code, CLI and HTTP are thin layers over the same core functions, so they give th
 | `build`      | Generates the files             |
 | `connectors` | Lists connectors                |
 
-The CLI is `document-engine`, for example `document-engine build hpp --data jan.json --to pdf`. The HTTP server starts with `document-engine serve`. The calling app stays responsible for its screens and users.
+The CLI command is `hde`, also used in scripts: `hde build hpp --data jan.json --to pdf`. The HTTP server starts with `hde serve`. The calling app stays responsible for its screens and users.
 
 ## Libraries
 
@@ -106,7 +106,7 @@ The CLI is `document-engine`, for example `document-engine build hpp --data jan.
 
 - **Engine and library:** users install the engine, and their library lives outside it in its own repo.
 - **Basic library:** built into the engine, so an installed engine can already make basic documents. People pass their data to them, for example step by step in the CLI or through their own form. These are real documents, not demos, and there's no preview build. Every new library points to it by default.
-- **Template:** `afframe/document-library` is a public repo, licensed MIT-0, with one example per type. `document-engine library new` downloads it.
+- **Template:** `afframe/document-library` is a public repo, licensed MIT-0, with one example per type. `hde library new` downloads it.
 - **No data:** a library ships tags such as `$NAME` or `$SUM`, never values.
 - **Pinning:** a library is pinned to an exact commit, and the engine never updates it by itself. `library update` runs only on request and checks the library with no data.
 
@@ -138,7 +138,8 @@ A connector is code from its author and runs with the engine's full rights. Inst
 
 ## Project rules
 
-- **Repo:** `afframe/document-engine`, public. The remote is the source of truth. Commits are prepared on a branch and merged to `main` when Hleb approves. PRs are only for Dependabot, external contributions and releases.
+- **Name:** the product is Headless Document Engine, never just HDE. `hde` is only the short command, and the repo stays `afframe/document-engine`.
+- **Repo:** public. The remote is the source of truth. Commits are prepared on a branch and merged to `main` when Hleb approves. PRs are only for Dependabot, external contributions and releases.
 - **License:** MPL-2.0 with a simple CLA: a checkbox in the PR, no bot. Copyright holder: Hleb Tkachenko.
 - **Other libraries:** each sets its own license.
 - **Public repo content:** never client names or real data. Examples use invented data.
