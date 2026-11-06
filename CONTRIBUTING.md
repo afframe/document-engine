@@ -8,4 +8,4 @@ The project is at the design stage and has no engine code yet, so open an issue 
 
 Examples must use invented data, never real contracts, client names or personal data.
 
-The project is licensed under [AGPL-3.0](LICENSE). To contribute, you agree to the [Contributor License Agreement](CLA.md) by ticking its box in your pull request.
+The project is licensed under [MPL-2.0](LICENSE). To contribute, you agree to the [Contributor License Agreement](CLA.md) by ticking its box in your pull request.

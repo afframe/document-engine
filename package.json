@@ -11,7 +11,7 @@
     "preflight": "prettier --check . && oxlint --no-error-on-unmatched-pattern && fallow audit -q --no-cache",
     "prepare": "git config core.hooksPath .githooks"
   },
-  "license": "AGPL-3.0-only",
+  "license": "MPL-2.0",
   "packageManager": "pnpm@12.18.0",
   "version": "0.1.0"
 }

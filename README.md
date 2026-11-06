@@ -28,4 +28,4 @@ Each document type is made of:
 
 ## License
 
-Copyright 2026 Hleb Tkachenko. Licensed under the [GNU Affero General Public License v3.0](LICENSE). You can use, change and share the engine. If you distribute it, or let users reach a changed version over a network, you must give them the source code under the same license.
+Copyright 2026 Hleb Tkachenko. Licensed under the [Mozilla Public License 2.0](LICENSE). You can use, change and share the engine, and combine it with your own code under your own terms. If you distribute a changed engine file, you must share that file's source code under the same license.

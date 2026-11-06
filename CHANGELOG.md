@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- License changed from AGPL-3.0 to MPL-2.0
+
 ## 0.1.0
 
 First release: repository setup only, with no engine code yet.
