@@ -1,0 +1,24 @@
+node_modules/
+.fallow/
+*.log
+.DS_Store
+_junk/
+
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.enc
+client_secret*.json
+
+# Generated documents and local test data can hold personal data
+/output/
+/tmp/
+
+.claude/*
+!.claude/settings.json
+CLAUDE.local.md
+.context/
