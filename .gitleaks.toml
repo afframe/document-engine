@@ -1,0 +1,32 @@
+# Default rules plus Anthropic keys and Czech identifiers, which GitHub's scanning doesn't look for.
+[extend]
+useDefault = true
+
+[[rules]]
+id = "anthropic-api-key"
+description = "Anthropic API key"
+regex = '''\bsk-ant-(api|admin)\d{2}-[A-Za-z0-9_\-]{60,}'''
+keywords = ["sk-ant-"]
+
+[[rules]]
+id = "czech-iban"
+description = "Czech IBAN"
+regex = '''\bCZ\d{2} ?(?:\d{4} ?){4}\d{4}\b'''
+keywords = ["cz"]
+
+[[rules]]
+id = "czech-vat-dic"
+description = "Czech VAT number (DIC)"
+regex = '''\bCZ\d{8,10}\b'''
+keywords = ["cz"]
+
+[[rules]]
+id = "czech-ico"
+description = "Czech business ID (ICO) after its label"
+regex = '''(?i)\bi[čc]o\s*[:=]\s*\d{8}\b'''
+keywords = ["ico", "ičo"]
+
+[[rules]]
+id = "czech-birth-number"
+description = "Czech birth number"
+regex = '''\b\d{6}/\d{3,4}\b'''
