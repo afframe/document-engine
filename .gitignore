@@ -11,6 +11,13 @@ coverage/
 !.env.example
 *.key
 *.pem
+*.p12
+*.pfx
+*.enc
+client_secret*.json
+
+# Moved-aside files
+_junk/
 
 # Generated documents and local test data can hold personal data
 /output/
