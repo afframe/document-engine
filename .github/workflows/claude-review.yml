@@ -1,4 +1,3 @@
-# Claude reviews each same-repo PR and posts inline comments. Uses the org secret CLAUDE_CODE_OAUTH_TOKEN.
 name: Claude review
 
 on:
@@ -11,8 +10,8 @@ concurrency:
 
 jobs:
   review:
-    # Never on fork PRs: their text and code are untrusted input.
-    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft
+    # Fork PRs are untrusted input, and Dependabot PRs can't read this secret.
+    if: github.event.pull_request.head.repo.full_name == github.repository && !github.event.pull_request.draft && github.event.pull_request.user.login != 'dependabot[bot]'
     runs-on: ubuntu-24.04
     timeout-minutes: 30
     permissions:

@@ -1,11 +1,9 @@
-# Dependencies and build output
 node_modules/
-dist/
-coverage/
-*.tsbuildinfo
 .fallow/
+*.log
+.DS_Store
+_junk/
 
-# Environment and secrets
 .env
 .env.*
 !.env.example
@@ -16,18 +14,10 @@ coverage/
 *.enc
 client_secret*.json
 
-# Moved-aside files
-_junk/
-
 # Generated documents and local test data can hold personal data
 /output/
 /tmp/
 
-# Logs and OS files
-*.log
-.DS_Store
-
-# Claude: settings.json is tracked, the rest is personal
 .claude/*
 !.claude/settings.json
 CLAUDE.local.md

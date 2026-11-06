@@ -1,19 +1,15 @@
 {
   "name": "document-engine",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Headless Document Engine: generate any document from templates and data",
-  "license": "AGPL-3.0-only",
-  "repository": "github:afframe/document-engine",
-  "type": "module",
-  "packageManager": "pnpm@12.18.0",
-  "scripts": {
-    "format": "prettier --write .",
-    "preflight": "prettier --check . && oxlint --no-error-on-unmatched-pattern && fallow audit -q --no-cache"
-  },
   "devDependencies": {
     "fallow": "3.39.0",
     "oxlint": "1.91.0",
     "prettier": "3.9.10"
-  }
+  },
+  "private": true,
+  "scripts": {
+    "format": "prettier --write .",
+    "preflight": "prettier --check . && oxlint --no-error-on-unmatched-pattern && fallow audit -q --no-cache"
+  },
+  "license": "AGPL-3.0-only",
+  "packageManager": "pnpm@12.18.0"
 }
