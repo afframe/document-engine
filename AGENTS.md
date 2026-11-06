@@ -1,6 +1,6 @@
 # Headless Document Engine
 
-Design stage: there is no engine code yet. `README.md` describes the planned design. Add `ARCHITECTURE.md` with the first code.
+Design stage: there is no engine code yet. `ARCHITECTURE.md` holds the approved design and nothing else; update it after each of Hleb's rulings.
 
 ## Commands
 
@@ -12,6 +12,6 @@ Design stage: there is no engine code yet. `README.md` describes the planned des
 
 ## Repo rules
 
-- Commit straight to `main` after `pnpm preflight` passes. Don't create a branch or PR for our own work. PRs are only for Dependabot, external contributions and releases.
+- The remote is the source of truth. Prepare commits on a branch after `pnpm preflight` passes, and merge to `main` only when Hleb approves. PRs are only for Dependabot, external contributions and releases.
 - This repo is public. Never commit client names, real contracts, real personal or accounting data, or generated documents; examples use invented data. `/output/` and `/tmp/` are ignored for local runs.
 - Licensed MPL-2.0. Check a new dependency's license is compatible before adding it.
