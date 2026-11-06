@@ -1,0 +1,10 @@
+language: en-US
+reviews:
+  profile: chill
+  # Reviews only on request: comment "@coderabbitai review" on the PR.
+  auto_review:
+    enabled: false
+  path_instructions:
+    - path: '**'
+      instructions: >-
+        Public repository: flag secrets, internal URLs, client names and real personal data.
