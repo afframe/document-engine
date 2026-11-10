@@ -51,7 +51,7 @@ PROJECT (one set per project, shares nothing with other projects)
 
 ### Data
 
-The tool defines the data table and its rules. Each project has exactly one table: the basic library's tags plus the project's additions. `$CLIENT` is one unique tag across all documents of that project. A tag is only standard across projects if the tool ships it.
+The tool defines the data table and its rules. Each project has exactly one table: the basic library's tags plus the project's additions. `$CLIENT` is one unique tag across all documents of that project. Shipped tags are quickstarts, not a mandatory standard: they sit in the same table as every other tag and are changed the same way.
 
 Each tag has:
 
@@ -178,7 +178,7 @@ connector/<id>/
 - **Find:** public libraries tag their GitHub repo `hde-library`, and `hde library search` looks them up, with no server.
 - **Create:** `hde library new` downloads `afframe/document-library`, a public repo, licensed MIT-0, with one example per type.
 - **Basic library:** built into the tool, so an installed tool can already make basic documents. People pass their data to them, for example step by step in the CLI or through their own form. These are real documents, not demos, and there's no preview build. Every project installs it first.
-- **Requests:** a library requests every tag it uses, except shipped ones.
+- **Requests:** a library requests every tag it uses, shipped ones included, so a renamed tag still maps.
 - **Sets:** all members are checked before any file is written. Files are named `<doctype>-<name>`.
 
 ### Installing a library
@@ -198,7 +198,7 @@ connector/<id>/
 - **Other names:** a doctype, set or connector ID already in use is a question whose only answer is rename. A second repo with the same library ID is refused. A shipped connector can't be replaced.
 - **Applying the answer:** files stay exactly as pinned. The engine maps library tag names to table names when it loads them, and `hde.lock` records every merge, rename and answer with its reason, so a reinstall, a move or a share shows what changed and why.
 - **Without a person:** `--no-input` fails and lists the open questions as data. `--answers file` takes the same format as `hde.lock`. Each answer holds a hash of the rule it answered, and a changed rule is asked again, never added automatically. A keyword or description edit isn't a question.
-- **Renaming later:** `hde tag rename` covers tags and inner fields, and is as easy as creating one. It is refused if the new name exists. The old name stays reserved, so a new tag can take it only through a question. A call still sending the old name is refused, and the error names the new tag.
+- **Renaming later:** `hde tag rename` covers every tag, shipped ones included, and inner fields, and is as easy as creating one. It is refused if the new name exists. The old name stays reserved, so a new tag can take it only through a question. A call still sending the old name is refused, and the error names the new tag.
 - **Removing:** `hde library remove` drops rows no other library uses.
 - **Connector code:** `library add` prints each connector's `env` list and option names with the pin, because installing a connector means installing its author's software.
 
