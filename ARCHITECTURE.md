@@ -157,7 +157,7 @@ export async function write(ctx) {
 6. The connectors named by the call, or else the doctype's defaults, run. `check` never runs a connector.
 7. It returns the files with a record: engine version, each library's pin and file hash, table hash, lock hash, tool versions and receipts.
 
-These are fixed core steps, not something users define.
+**Workflows:** the tool ships working functions, scripts and code for what it does, not descriptions of ideas. Each part in this file is built as something people and agents can run.
 
 **Deterministic:** the same project, input and tool version give the same bytes. The core uses no clock and no network, tools and fonts are pinned, and dates, including the PDF date, come from the call. A connector that sends to a system can repeat what it sends, but a retry sends it again.
 
